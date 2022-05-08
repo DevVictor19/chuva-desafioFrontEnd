@@ -1,0 +1,95 @@
+/* global config */
+
+:root {
+  --orange0: #fdf1eb;
+  --orange1: #ffb354;
+  --orange2: #ee7a3a;
+  --orange3: #ed7839;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* side menu */
+.sidemenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 220px;
+  height: 100%;
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 2px 0 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.sidemenu-logo-text {
+  width: 100%;
+  height: 68px;
+
+  background: linear-gradient(180deg, var(--orange1) 0%, var(--orange2) 100%);
+}
+
+.sidemenu-logo-text a {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  text-decoration: none;
+
+  color: white;
+}
+
+.sidemenu-navigation {
+  width: 100%;
+}
+
+.sidemenu-navigation li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 35px;
+
+  border-bottom: 2px solid rgb(0, 0, 0, 0.1);
+}
+
+.sidemenu-navigation a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #725c5c;
+  cursor: pointer;
+
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.sidemenu-active {
+  position: relative;
+  background-color: var(--orange0);
+}
+
+.sidemenu-active a {
+  margin-left: 29px;
+}
+
+.sidemenu-active-mark {
+  position: absolute;
+  left: 0;
+  background: linear-gradient(180deg, #ffb455 0%, #ed7839 100%);
+  height: 100%;
+  width: 5px;
+}

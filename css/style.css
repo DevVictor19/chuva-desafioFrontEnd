@@ -229,7 +229,6 @@ body {
 .main {
   display: flex;
   padding: 20px 45px 30px;
-  width: 100%;
 }
 
 .main-content {
@@ -237,7 +236,6 @@ body {
 }
 
 .main-content h1 {
-  font-family: "Roboto";
   font-weight: 900;
   font-size: 20px;
   line-height: 125%;
@@ -261,13 +259,24 @@ body {
 
   margin-left: 31px;
   width: 242px;
+  height: 439px;
+}
+
+.main-info .refer {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+
+  color: var(--orange3);
 }
 
 .main-actions {
   display: flex;
   align-items: center;
 
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .main-actions .download-btn {
@@ -325,4 +334,101 @@ body {
   font-size: 16px;
 
   cursor: pointer;
+}
+
+.main-details {
+  border: 1px solid #ececec;
+  border-radius: 3px;
+
+  margin-top: 5px;
+}
+
+.main-details-title {
+  width: 242px;
+  height: 45px;
+  padding: 11px 15px 9px;
+
+  background-color: var(--orange0);
+  border-bottom: 1px solid #ececec;
+}
+
+.main-details-title h1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.main-details-about {
+  height: 394px;
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+.main-details-about::-webkit-scrollbar {
+  width: 3px;
+}
+
+.main-details-about::-webkit-scrollbar-track {
+  background: #e7e7e7;
+}
+
+.main-details-about::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 5px;
+}
+
+.main-details-theme {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+
+  color: #5c5c5c;
+  margin-bottom: 26px;
+}
+
+.main-details-theme p {
+  margin-bottom: 5px;
+}
+
+.main-details-theme strong {
+  font-weight: bold;
+  color: black;
+}
+
+.main-details-author {
+  margin-bottom: 30px;
+}
+
+.main-details-author h1 {
+  font-family: "Quicksand";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+  color: black;
+
+  margin-bottom: 10px;
+}
+
+.main-details-author p {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+
+  margin-top: 6px;
+  color: #333;
+}
+
+.main-details-local {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16.8px;
+  letter-spacing: 0.02em;
+
+  color: #5c5c5c;
 }

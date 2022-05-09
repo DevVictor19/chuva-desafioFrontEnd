@@ -38,7 +38,7 @@ body {
   left: 0;
 
   width: 220px;
-  height: 100%;
+  height: 1701px;
 
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 2px 0 4px 1px rgba(0, 0, 0, 0.1);
@@ -228,7 +228,7 @@ body {
 /* main video */
 .main {
   display: flex;
-  padding: 20px 45px 30px;
+  padding: 20px 45px 30px 43px;
 }
 
 .main-content {
@@ -431,4 +431,63 @@ body {
   letter-spacing: 0.02em;
 
   color: #5c5c5c;
+}
+
+/* secao resumo */
+
+.resume-discussions-wrapper {
+  padding: 0 45px 30px 43px;
+}
+
+.resume {
+  width: 1058px;
+  min-height: 189px;
+
+  border: 1px solid #ececec;
+  border-radius: 3px;
+}
+
+.resume-title {
+  width: inherit;
+  height: 45px;
+  padding: 10px 16px;
+
+  background-color: var(--orange0);
+  color: #4e4e4e;
+
+  border-bottom: 1px solid #ececec;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.resume-text {
+  overflow: hidden;
+  min-height: 114px;
+  padding: 15px;
+}
+
+.resume-text p {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+
+  color: #5c5c5c;
+}
+
+#resume-text-showMore {
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--orange3);
+}
+
+.resume-text-clipped {
+  display: none;
+}
+
+.resume-text-clipped p {
+  margin-top: 40px;
 }

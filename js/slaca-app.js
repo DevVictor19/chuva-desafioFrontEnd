@@ -37,20 +37,20 @@ const slaca_showMoreText = () => {
   const resumeShowMoreBtn = document.getElementById("resume-text-showMore");
 
   // funcoes funcionamento
-  const hideElementById = (id) => {
+  const setDisplayNoneById = (id) => {
     const element = document.getElementById(id);
     element.style.display = "none";
   };
 
-  const showElementByClass = (className) => {
+  const setDisplayBlockByClassName = (className) => {
     const element = document.getElementsByClassName(className);
     element[0].style.display = "block";
   };
 
   const showTextsHandler = (ellipsis_id, button_id, clippedText_class) => {
-    hideElementById(ellipsis_id);
-    hideElementById(button_id);
-    showElementByClass(clippedText_class);
+    setDisplayNoneById(ellipsis_id);
+    setDisplayNoneById(button_id);
+    setDisplayBlockByClassName(clippedText_class);
   };
 
   // eventos

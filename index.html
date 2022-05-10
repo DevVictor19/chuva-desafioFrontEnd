@@ -229,6 +229,40 @@
             </button>
             <span id="discussions-line"> </span>
           </div>
+          <div id="discussions-writeNewTopic" class="discussions-writeTopic">
+            <p>
+              Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+              autores!
+            </p>
+            <form>
+              <label for="assunto">Assunto</label>
+              <input
+                type="text"
+                name="assunto"
+                id="assunto"
+                placeholder="Defina um tópico sucinto para notificar os autores..."
+              />
+              <label for="conteudo">Conteúdo</label>
+              <textarea
+                name="conteudo"
+                id="conteudo"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <div class="discussions-form-actions-wrapper">
+                <div class="discussions-form-actions">
+                  <img src="./assets/discussions/bold.png" alt="bold icon" />
+                  <img
+                    src="./assets/discussions/italic.png"
+                    alt="italic icon"
+                  />
+                </div>
+                <button id="discussions-form-actions-submit" type="button">
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
       </div>
     </div>

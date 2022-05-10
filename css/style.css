@@ -561,7 +561,6 @@ body {
 #discussions-line {
   margin-top: 31px;
 
-  height: 1px;
   width: 1027px;
   border-bottom: 1px solid #e7e7e7;
 }
@@ -593,4 +592,126 @@ body {
 .discussions-content button img {
   position: absolute;
   left: 13px;
+}
+
+#discussions-addTopic {
+  display: none;
+}
+
+.discussions-writeTopic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 17px;
+}
+
+.discussions-writeTopic p {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  margin-bottom: 22px;
+
+  color: #5c5c5c;
+}
+
+.discussions-writeTopic form {
+  position: relative;
+}
+
+.discussions-writeTopic form label {
+  display: block;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: var(--orange3);
+}
+
+.discussions-writeTopic form #assunto {
+  width: 1025.52px;
+  height: 39px;
+  padding: 10px 23px;
+  margin-bottom: 10px;
+  margin-top: 1px;
+
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  outline: none;
+
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #4d4d4d;
+}
+
+.discussions-writeTopic form #conteudo {
+  width: 1025.52px;
+  height: 82px;
+  margin-top: 4px;
+  padding: 10px 23px;
+
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #4d4d4d;
+}
+
+.discussions-form-actions-wrapper {
+  position: absolute;
+  top: 173px;
+
+  display: flex;
+  align-items: center;
+}
+
+.discussions-form-actions {
+  width: 820.42px;
+  height: 31px;
+  padding: 6px 29px;
+
+  background: #eaf1f2;
+  border: 1px solid #cccccc;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.discussions-form-actions img {
+  cursor: pointer;
+}
+
+.discussions-form-actions img:nth-child(2) {
+  margin-left: 30px;
+}
+
+#discussions-form-actions-submit {
+  width: 205.1px;
+  height: 31px;
+  cursor: pointer;
+
+  border: none;
+  background: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
+  border-radius: 0px 0px 4px 0px;
+
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+
+  text-align: center;
+  color: #ffffff;
 }

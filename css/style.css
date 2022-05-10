@@ -595,7 +595,7 @@ body {
 }
 
 #discussions-addTopic {
-  display: none;
+  display: flex;
 }
 
 .discussions-writeTopic {
@@ -845,7 +845,7 @@ body {
   align-items: center;
 
   background-color: rgba(221, 221, 221, 0.5);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(3px);
 }
 
 .discussions-currentSendedTopic-blurOverlay h3 {
@@ -854,4 +854,8 @@ body {
 
 .discussions-currentSendedTopic-blurOverlay a {
   margin-top: 8px;
+}
+
+#discussions-topicSent {
+  display: none;
 }

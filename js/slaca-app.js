@@ -24,14 +24,15 @@ const slaca_app = () => {
     setDisplayBlockById(clippedText_id);
   };
 
-  resumeShowMoreBtn.addEventListener("click", () => {
+  const resumeShowMoreBtnHandler = () => {
     showTextsHandler(
       "resume-ellipsis",
       "resume-text-showMore",
       "resume-text-clipped"
     );
-  });
-  // expandir a secao resumo -> fim
+  };
+
+  resumeShowMoreBtn.addEventListener("click", resumeShowMoreBtnHandler);
 
   // adicionar topicos -> inicio
   const createTopicBtn = document.getElementById("create-topic-btn");
@@ -42,7 +43,7 @@ const slaca_app = () => {
 
   const createTopicBtnHandler = () => {
     setDisplayNoneById("discussions-addTopic");
-    setDisplayFlexById("discussions-writeNewTopic");
+    setDisplayFlexById("discussions-writeTopic");
   };
 
   const sendNewTopicBtnHandler = () => {
@@ -71,8 +72,7 @@ const slaca_app = () => {
     conteudoTextArea.style.borderColor = "#ccc";
     conteudoTextArea.style.borderBottom = "none";
 
-    // renderizando a outra tela
-    setDisplayNoneById("discussions-writeNewTopic");
+    setDisplayNoneById("discussions-writeTopic");
     setDisplayFlexById("discussions-topicSent");
 
     // limpando inputs
@@ -88,6 +88,5 @@ const slaca_app = () => {
   createTopicBtn.addEventListener("click", createTopicBtnHandler);
   sendNewTopicBtn.addEventListener("click", sendNewTopicBtnHandler);
   remakeTopicBtn.addEventListener("click", remakeTopicBtnHandler);
-  // adicionar topicos -> fim
 };
 slaca_app();

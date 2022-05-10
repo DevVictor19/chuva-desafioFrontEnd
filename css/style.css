@@ -95,7 +95,7 @@ body {
   margin-left: 29px;
 }
 
-.sidemenu-active-mark {
+#sidemenu-active-mark {
   position: absolute;
   left: 0;
   background: linear-gradient(180deg, #ffb455 0%, #ed7839 100%);
@@ -520,6 +520,10 @@ body {
   color: #4e4e4e;
 }
 
+#discussions-addTopic {
+  display: flex;
+}
+
 .discussions-content {
   position: relative;
 
@@ -594,8 +598,8 @@ body {
   left: 13px;
 }
 
-#discussions-addTopic {
-  display: flex;
+#discussions-writeTopic {
+  display: none;
 }
 
 .discussions-writeTopic {
@@ -716,7 +720,7 @@ body {
   color: #ffffff;
 }
 
-#discussions-writeNewTopic {
+#discussions-topicSent {
   display: none;
 }
 
@@ -854,8 +858,4 @@ body {
 
 .discussions-currentSendedTopic-blurOverlay a {
   margin-top: 8px;
-}
-
-#discussions-topicSent {
-  display: none;
 }

@@ -4,11 +4,11 @@ const slaca_sidemenu = () => {
     ".sidemenu-navigation ul li a"
   );
 
-  const initialActiveLi = document.getElementsByClassName("sidemenu-active");
-  const activeSpan = document.querySelector(".sidemenu-active span");
+  const [initialActiveLi] = document.getElementsByClassName("sidemenu-active");
+  const activeSpan = document.getElementById("sidemenu-active-mark");
 
   // funcoes funcionamento
-  let lastActiveLi = initialActiveLi[0];
+  let lastActiveLi = initialActiveLi;
 
   const selectItemMenu = (event) => {
     const currentClickedLi = event.path[1];

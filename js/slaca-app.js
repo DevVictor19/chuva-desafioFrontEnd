@@ -42,15 +42,15 @@ const slaca_showMoreText = () => {
     element.style.display = "none";
   };
 
-  const setDisplayBlockByClassName = (className) => {
-    const element = document.getElementsByClassName(className);
-    element[0].style.display = "block";
+  const setDisplayBlockById = (id) => {
+    const element = document.getElementById(id);
+    element.style.display = "block";
   };
 
-  const showTextsHandler = (ellipsis_id, button_id, clippedText_class) => {
+  const showTextsHandler = (ellipsis_id, button_id, clippedText_id) => {
     setDisplayNoneById(ellipsis_id);
     setDisplayNoneById(button_id);
-    setDisplayBlockByClassName(clippedText_class);
+    setDisplayBlockById(clippedText_id);
   };
 
   // eventos

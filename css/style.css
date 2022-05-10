@@ -484,10 +484,10 @@ body {
   color: var(--orange3);
 }
 
-.resume-text-clipped {
+#resume-text-clipped {
   display: none;
 }
 
-.resume-text-clipped p {
+#resume-text-clipped p {
   margin-top: 40px;
 }

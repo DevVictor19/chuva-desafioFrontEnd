@@ -491,3 +491,106 @@ body {
 #resume-text-clipped p {
   margin-top: 40px;
 }
+
+/* sessao discussao */
+.discussions-wrapper {
+  padding: 0 45px 50px 43px;
+}
+
+.discussions {
+  width: 1058px;
+  height: 621px;
+  border: 1px solid #ececec;
+  border-radius: 3px;
+}
+
+.discussions-title {
+  padding: 10px 16px;
+  height: 45px;
+
+  background-color: var(--orange0);
+  border-bottom: 1px solid #ececec;
+}
+
+.discussions-title h1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #4e4e4e;
+}
+
+.discussions-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discussions-content h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 15px;
+
+  color: var(--orange3);
+}
+
+.disscussions-content-vectors {
+  margin-top: 27px;
+}
+
+.disscussions-content-vectors img:nth-child(2) {
+  margin: 0 52px;
+}
+
+.discussions-content p {
+  width: 626px;
+  margin-top: 35px;
+
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #595959;
+}
+
+#discussions-line {
+  margin-top: 31px;
+
+  height: 1px;
+  width: 1027px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.discussions-content button {
+  position: absolute;
+  top: 202px;
+
+  width: 133px;
+  height: 32px;
+  padding: 0 12px 0 0;
+
+  border: none;
+  outline: none;
+  background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+  text-align: right;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.discussions-content button img {
+  position: absolute;
+  left: 13px;
+}

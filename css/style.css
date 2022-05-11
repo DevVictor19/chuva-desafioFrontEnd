@@ -114,7 +114,7 @@ button {
   justify-content: space-between;
 
   width: 100%;
-  height: 68px;
+  min-height: 68px;
   background-color: var(--orange0);
 
   color: #725c5c;
@@ -144,6 +144,7 @@ button {
 
 .header-input {
   position: relative;
+  margin: 0 30px;
 }
 
 .header-input img {
@@ -440,11 +441,11 @@ button {
 /* secao resumo */
 
 .resume-wrapper {
-  padding: 0 45px 30px 43px;
+  padding: 0 20px 25px 30px;
 }
 
 .resume {
-  width: 1058px;
+  width: 100%;
   min-height: 189px;
 
   border: 1px solid #ececec;
@@ -498,11 +499,11 @@ button {
 
 /* sessao discussao */
 .discussions-wrapper {
-  padding: 0 45px 50px 43px;
+  padding: 0 20px 50px 30px;
 }
 
 .discussions {
-  width: 1058px;
+  width: 100%;
   border: 1px solid #ececec;
   border-radius: 3px;
 }
@@ -529,6 +530,7 @@ button {
 
 .discussions-content {
   position: relative;
+  padding: 15px;
 
   display: flex;
   flex-direction: column;
@@ -539,7 +541,6 @@ button {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 15px;
 
   color: var(--orange3);
 }
@@ -568,13 +569,13 @@ button {
 #discussions-line {
   margin-top: 31px;
 
-  width: 1027px;
+  width: 98%;
   border-bottom: 1px solid #e7e7e7;
 }
 
 .discussions-content button {
   position: absolute;
-  top: 202px;
+  top: calc(100% - 32px);
 
   width: 133px;
   height: 32px;
@@ -626,6 +627,7 @@ button {
 
 .discussions-writeTopic form {
   position: relative;
+  width: 100%;
 }
 
 .discussions-writeTopic form label {
@@ -639,7 +641,7 @@ button {
 }
 
 .discussions-writeTopic form #assunto {
-  width: 1025.52px;
+  width: 100%;
   height: 39px;
   padding: 10px 23px;
   margin-bottom: 10px;
@@ -659,7 +661,7 @@ button {
 }
 
 .discussions-writeTopic form #conteudo {
-  width: 1025.52px;
+  width: 100%;
   height: 82px;
   margin-top: 4px;
   padding: 10px 23px;
@@ -682,13 +684,14 @@ button {
 .discussions-form-actions-wrapper {
   position: absolute;
   top: 173px;
+  width: 100%;
 
   display: flex;
   align-items: center;
 }
 
 .discussions-form-actions {
-  width: 820.42px;
+  width: 100%;
   height: 31px;
   padding: 6px 29px;
 
@@ -729,6 +732,7 @@ button {
 
 .discussions-topicSent {
   position: relative;
+  padding: 15px;
 
   display: flex;
   flex-direction: column;
@@ -739,7 +743,6 @@ button {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 15px;
 
   color: var(--orange3);
 }
@@ -769,7 +772,7 @@ button {
 
 .discussions-topicSent button {
   position: absolute;
-  top: 180px;
+  top: calc(100% - 208px);
 
   width: 235.15px;
   height: 32px;
@@ -792,7 +795,7 @@ button {
 }
 
 #discussions-line-topicSent {
-  width: 1027px;
+  width: 98%;
   margin-top: 65px;
   border-bottom: 1px solid #e7e7e7;
 }
@@ -800,7 +803,7 @@ button {
 .discussions-currentSendedTopic {
   position: relative;
 
-  width: 1028px;
+  width: 100%;
   height: 148px;
   padding: 18px 26px;
   margin-top: 28px;
@@ -867,13 +870,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 15px;
 
   margin-top: 30px;
   font-family: "Quicksand";
 }
 
 .dicussions-card {
-  width: 1028px;
+  width: 100%;
   min-height: 148px;
   margin-bottom: 17px;
 
@@ -987,10 +991,10 @@ button {
 
 #footer {
   position: relative;
-  width: 1086px;
+  width: 98%;
   height: 181px;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   display: flex;
   align-items: center;
@@ -1041,3 +1045,5 @@ button {
   width: 100%;
   border-bottom: 1px solid #e7e7e7;
 }
+
+/* responsivo */

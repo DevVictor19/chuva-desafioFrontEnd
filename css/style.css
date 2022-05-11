@@ -935,6 +935,7 @@ body {
 
 .discussions-card-answer {
   padding: 18px 23px;
+  position: relative;
 
   background: #f8f8f8;
   border-top: 1px solid #e7e7e7;
@@ -956,4 +957,20 @@ body {
   line-height: 18px;
 
   color: #4d4d4d;
+}
+
+.discussions-card-answer-icon {
+  position: absolute;
+  right: 23px;
+  top: 8px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: var(--orange3);
+}
+
+.discussions-card-answer-icon img {
+  margin-left: 10px;
 }

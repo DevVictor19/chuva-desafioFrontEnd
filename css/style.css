@@ -499,7 +499,6 @@ body {
 
 .discussions {
   width: 1058px;
-  height: 621px;
   border: 1px solid #ececec;
   border-radius: 3px;
 }
@@ -858,4 +857,103 @@ body {
 
 .discussions-currentSendedTopic-blurOverlay a {
   margin-top: 8px;
+}
+
+.discussions-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 30px;
+  font-family: "Quicksand";
+}
+
+.dicussions-card {
+  width: 1028px;
+  min-height: 148px;
+  margin-bottom: 17px;
+
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.discussions-card-content {
+  padding: 17px 24px;
+}
+
+.discussions-card-content h1 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: var(--orange3);
+}
+
+.discussions-card-content h2 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 4px;
+
+  color: #5c5c5c;
+}
+
+.discussions-card-content p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 10px;
+
+  color: #4d4d4d;
+}
+
+.discussions-card-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.discussions-card-actions img {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.discussions-card-likes-btn {
+  margin-right: 15px;
+}
+
+.discussions-card-actions span {
+  font-family: "Segoe UI";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+
+  color: #757575;
+}
+
+.discussions-card-answer {
+  padding: 18px 23px;
+
+  background: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+}
+
+.discussions-card-answer h1 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #5c5c5c;
+}
+
+.discussions-card-answer p {
+  margin-top: 10px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #4d4d4d;
 }

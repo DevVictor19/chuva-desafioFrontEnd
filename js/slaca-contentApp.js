@@ -1,4 +1,4 @@
-const slaca_app = () => {
+const slaca_contentApp = () => {
   // funcoes globais --------------------
   const setDisplayNoneById = (id) => {
     const element = document.getElementById(id);
@@ -124,4 +124,4 @@ const slaca_app = () => {
     AnswerBtn.addEventListener("click", answerBtnHandler);
   }
 };
-slaca_app();
+slaca_contentApp();

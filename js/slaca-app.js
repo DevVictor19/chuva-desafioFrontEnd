@@ -1,5 +1,5 @@
 const slaca_app = () => {
-  // funcoes globais
+  // funcoes globais --------------------
   const setDisplayNoneById = (id) => {
     const element = document.getElementById(id);
     element.style.display = "none";
@@ -15,7 +15,21 @@ const slaca_app = () => {
     element.style.display = "flex";
   };
 
-  // expandir a secao resumo -> inicio
+  // modificar a aultura da barra lateral de forma dinâmica. --------------------------
+  const content = document.getElementById("content");
+  const [sideBarMenu] = document.getElementsByClassName("sidemenu");
+
+  const bodyHeightChangeHandler = () => {
+    const currentHeight =
+      content.clientHeight || content.scrollHeight || content.offsetHeight;
+
+    sideBarMenu.style.height = `${currentHeight}px`;
+  };
+
+  content.addEventListener("click", bodyHeightChangeHandler);
+  window.addEventListener("load", bodyHeightChangeHandler);
+
+  // expandir a secao resumo ----------------------------------------
   const resumeShowMoreBtn = document.getElementById("resume-text-showMore");
 
   const showTextsHandler = (ellipsis_id, button_id, clippedText_id) => {
@@ -34,7 +48,7 @@ const slaca_app = () => {
 
   resumeShowMoreBtn.addEventListener("click", resumeShowMoreBtnHandler);
 
-  // adicionar topicos -> inicio
+  // adicionar topicos ---------------------------------------
   const createTopicBtn = document.getElementById("create-topic-btn");
   const sendNewTopicBtn = document.getElementById(
     "discussions-form-actions-submit"
@@ -89,22 +103,21 @@ const slaca_app = () => {
   sendNewTopicBtn.addEventListener("click", sendNewTopicBtnHandler);
   remakeTopicBtn.addEventListener("click", remakeTopicBtnHandler);
 
-  // exibir e esconder comentarios - secao discussoes
+  // exibir e esconder respostas - secao discussoes ---------------
   const discussionCardAnswerBtns = document.getElementsByClassName(
     "discussions-card-answers-btn"
   );
-  console.log(discussionCardAnswerBtns);
 
   const answerBtnHandler = (event) => {
     currentAnswerSectionId = `answers-${event.target.id}`;
     currentAnswerSection = document.getElementById(currentAnswerSectionId);
 
-    if (currentAnswerSection.style.display === "none") {
-      setDisplayBlockById(currentAnswerSectionId);
+    if (currentAnswerSection.style.display === "block") {
+      setDisplayNoneById(currentAnswerSectionId);
       return;
     }
 
-    setDisplayNoneById(currentAnswerSectionId);
+    setDisplayBlockById(currentAnswerSectionId);
   };
 
   for (let AnswerBtn of discussionCardAnswerBtns) {

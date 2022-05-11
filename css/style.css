@@ -11,6 +11,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+span,
+button {
+  user-select: none;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -38,7 +43,6 @@ body {
   left: 0;
 
   width: 220px;
-  height: 2314px;
 
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 2px 0 4px 1px rgba(0, 0, 0, 0.1);
@@ -933,6 +937,10 @@ body {
   color: #757575;
 }
 
+.discussions-card-answers {
+  display: none;
+}
+
 .discussions-card-answer {
   padding: 18px 23px;
   position: relative;
@@ -973,4 +981,63 @@ body {
 
 .discussions-card-answer-icon img {
   margin-left: 10px;
+}
+
+/* footer */
+
+#footer {
+  position: relative;
+  width: 1086px;
+  height: 181px;
+  margin: auto;
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+#footer button {
+  width: 207px;
+  height: 32px;
+  margin-left: 3px;
+
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: rgb(52, 25, 71);
+
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.footer-content {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #4d4d4d;
+}
+
+.footer-content h1 strong {
+  color: black;
+  font-weight: bold;
+}
+
+.footer-content p {
+  margin-top: 10px;
+}
+
+#footer-line {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
 }

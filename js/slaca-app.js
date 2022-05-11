@@ -88,5 +88,27 @@ const slaca_app = () => {
   createTopicBtn.addEventListener("click", createTopicBtnHandler);
   sendNewTopicBtn.addEventListener("click", sendNewTopicBtnHandler);
   remakeTopicBtn.addEventListener("click", remakeTopicBtnHandler);
+
+  // exibir e esconder comentarios - secao discussoes
+  const discussionCardAnswerBtns = document.getElementsByClassName(
+    "discussions-card-answers-btn"
+  );
+  console.log(discussionCardAnswerBtns);
+
+  const answerBtnHandler = (event) => {
+    currentAnswerSectionId = `answers-${event.target.id}`;
+    currentAnswerSection = document.getElementById(currentAnswerSectionId);
+
+    if (currentAnswerSection.style.display === "none") {
+      setDisplayBlockById(currentAnswerSectionId);
+      return;
+    }
+
+    setDisplayNoneById(currentAnswerSectionId);
+  };
+
+  for (let AnswerBtn of discussionCardAnswerBtns) {
+    AnswerBtn.addEventListener("click", answerBtnHandler);
+  }
 };
 slaca_app();

@@ -147,7 +147,7 @@ const slaca_app = () => {
     remakeTopicBtn.addEventListener("click", remakeTopicBtnHandler);
   };
 
-  const answersShowHideHanlder = () => {
+  const answersShowHideHandler = () => {
     const discussionCardAnswerBtns = document.getElementsByClassName(
       "discussions-card-answers-btn"
     );
@@ -173,8 +173,6 @@ const slaca_app = () => {
     const mobileBtn = document.getElementById("header-mobileMenuBars");
     const [sideMenu] = document.getElementsByClassName("sidemenu");
 
-    console.log(sideMenu);
-
     const mobileBtnHandler = () => {
       if (sideMenu.style.display === "flex") {
         setDisplayNone(sideMenu);
@@ -191,7 +189,7 @@ const slaca_app = () => {
   listenBodyContentHeight();
   expandTexts();
   addTopics();
-  answersShowHideHanlder();
+  answersShowHideHandler();
   showSideBarOnMobile();
 };
 slaca_app();

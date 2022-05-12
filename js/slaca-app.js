@@ -1,16 +1,13 @@
 const slaca_app = () => {
-  const setDisplayNoneById = (id) => {
-    const element = document.getElementById(id);
+  const setDisplayNone = (element) => {
     element.style.display = "none";
   };
 
-  const setDisplayBlockById = (id) => {
-    const element = document.getElementById(id);
+  const setDisplayBlock = (element) => {
     element.style.display = "block";
   };
 
-  const setDisplayFlexById = (id) => {
-    const element = document.getElementById(id);
+  const setDisplayFlex = (element) => {
     element.style.display = "flex";
   };
 
@@ -64,9 +61,13 @@ const slaca_app = () => {
     const resumeShowMoreBtn = document.getElementById("resume-text-showMore");
 
     const showTextsHandler = (ellipsis_id, button_id, clippedText_id) => {
-      setDisplayNoneById(ellipsis_id);
-      setDisplayNoneById(button_id);
-      setDisplayBlockById(clippedText_id);
+      const ellipsisElement = document.getElementById(ellipsis_id);
+      const buttonElement = document.getElementById(button_id);
+      const clippedTextElement = document.getElementById(clippedText_id);
+
+      setDisplayNone(ellipsisElement);
+      setDisplayNone(buttonElement);
+      setDisplayBlock(clippedTextElement);
     };
 
     const resumeShowMoreBtnHandler = () => {
@@ -86,10 +87,20 @@ const slaca_app = () => {
       "discussions-form-actions-submit"
     );
     const remakeTopicBtn = document.getElementById("remake-topic-btn");
+    const addTopicSectionElement = document.getElementById(
+      "discussions-addTopic"
+    );
+    const writeTopicSectionElement = document.getElementById(
+      "discussions-writeTopic"
+    );
+
+    const topicSentSectionElement = document.getElementById(
+      "discussions-topicSent"
+    );
 
     const createTopicBtnHandler = () => {
-      setDisplayNoneById("discussions-addTopic");
-      setDisplayFlexById("discussions-writeTopic");
+      setDisplayNone(addTopicSectionElement);
+      setDisplayFlex(writeTopicSectionElement);
     };
 
     const sendNewTopicBtnHandler = () => {
@@ -118,8 +129,8 @@ const slaca_app = () => {
       conteudoTextArea.style.borderColor = "#ccc";
       conteudoTextArea.style.borderBottom = "none";
 
-      setDisplayNoneById("discussions-writeTopic");
-      setDisplayFlexById("discussions-topicSent");
+      setDisplayNone(writeTopicSectionElement);
+      setDisplayFlex(topicSentSectionElement);
 
       // limpando inputs
       assuntoInputText.value = "";
@@ -127,8 +138,8 @@ const slaca_app = () => {
     };
 
     const remakeTopicBtnHandler = () => {
-      setDisplayNoneById("discussions-topicSent");
-      setDisplayFlexById("discussions-addTopic");
+      setDisplayNone(topicSentSectionElement);
+      setDisplayFlex(addTopicSectionElement);
     };
 
     createTopicBtn.addEventListener("click", createTopicBtnHandler);
@@ -146,11 +157,11 @@ const slaca_app = () => {
       currentAnswerSection = document.getElementById(currentAnswerSectionId);
 
       if (currentAnswerSection.style.display === "block") {
-        setDisplayNoneById(currentAnswerSectionId);
+        setDisplayNone(currentAnswerSection);
         return;
       }
 
-      setDisplayBlockById(currentAnswerSectionId);
+      setDisplayBlock(currentAnswerSection);
     };
 
     for (let AnswerBtn of discussionCardAnswerBtns) {
@@ -158,10 +169,29 @@ const slaca_app = () => {
     }
   };
 
+  const showSideBarOnMobile = () => {
+    const mobileBtn = document.getElementById("header-mobileMenuBars");
+    const [sideMenu] = document.getElementsByClassName("sidemenu");
+
+    console.log(sideMenu);
+
+    const mobileBtnHandler = () => {
+      if (sideMenu.style.display === "flex") {
+        setDisplayNone(sideMenu);
+        return;
+      }
+
+      setDisplayFlex(sideMenu);
+    };
+
+    mobileBtn.addEventListener("click", mobileBtnHandler);
+  };
+
   selectItensFromSideMenu();
   listenBodyContentHeight();
   expandTexts();
   addTopics();
   answersShowHideHanlder();
+  showSideBarOnMobile();
 };
 slaca_app();

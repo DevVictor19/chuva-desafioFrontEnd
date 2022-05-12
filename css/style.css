@@ -1142,7 +1142,7 @@ button {
 
 @media screen and (max-width: 1025px) {
   .sidemenu {
-    display: flex;
+    display: none;
     z-index: 10;
     background-color: #fff;
   }

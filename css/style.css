@@ -233,6 +233,7 @@ button {
 /* main video */
 .main {
   display: flex;
+  justify-content: space-between;
   padding: 20px 45px 30px 43px;
 }
 
@@ -441,7 +442,7 @@ button {
 /* secao resumo */
 
 .resume-wrapper {
-  padding: 0 20px 25px 30px;
+  padding: 0 30px 25px 42px;
 }
 
 .resume {
@@ -499,7 +500,7 @@ button {
 
 /* sessao discussao */
 .discussions-wrapper {
-  padding: 0 20px 50px 30px;
+  padding: 0 30px 50px 42px;
 }
 
 .discussions {
@@ -554,7 +555,7 @@ button {
 }
 
 .discussions-content p {
-  width: 626px;
+  width: 70%;
   margin-top: 35px;
 
   font-family: "Quicksand";
@@ -991,10 +992,11 @@ button {
 
 #footer {
   position: relative;
-  width: 98%;
+  width: 96%;
   height: 181px;
   margin: auto;
   margin-bottom: 15px;
+  padding-right: 25px;
 
   display: flex;
   align-items: center;
@@ -1047,3 +1049,46 @@ button {
 }
 
 /* responsivo */
+@media screen and (max-width: 1335px) {
+  .main {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 0 30px 25px 42px;
+  }
+
+  .main-content {
+    margin-top: 10px;
+  }
+
+  .main-content img {
+    margin-bottom: 20px;
+  }
+
+  .main-info .refer {
+    margin-bottom: 20px;
+  }
+
+  .main-info {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 0;
+    width: 783px;
+    height: auto;
+  }
+
+  .main-details {
+    width: 100%;
+  }
+
+  .main-details-title {
+    width: 100%;
+  }
+
+  .main-details-about {
+    overflow-y: auto;
+    height: 300px;
+  }
+}

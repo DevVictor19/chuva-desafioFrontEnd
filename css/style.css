@@ -1242,6 +1242,7 @@ button {
 
   #footer {
     flex-direction: column;
+    height: auto;
   }
 
   .footer-img {

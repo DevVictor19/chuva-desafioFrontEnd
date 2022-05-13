@@ -173,16 +173,15 @@ const slaca_app = () => {
     const mobileBtn = document.getElementById("header-mobileMenuBars");
     const [sideMenu] = document.getElementsByClassName("sidemenu");
 
-    const mobileBtnHandler = () => {
+    const toggleSideBar = () => {
       if (sideMenu.style.display === "flex") {
         setDisplayNone(sideMenu);
         return;
       }
-
       setDisplayFlex(sideMenu);
     };
 
-    mobileBtn.addEventListener("click", mobileBtnHandler);
+    mobileBtn.addEventListener("click", toggleSideBar);
   };
 
   selectItensFromSideMenu();

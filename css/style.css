@@ -1280,8 +1280,8 @@ button {
     text-align: center;
   }
 
-  .discussions-card-answer p {
-    margin-top: 50px;
+  .discussions-card-answer h1 {
+    margin-bottom: 50px;
   }
 
   .discussions-card-answer-icon {

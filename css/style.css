@@ -7,8 +7,16 @@
   --orange3: #ed7839;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  max-width: 1820px;
+  margin: auto;
 }
 
 span,
@@ -1124,6 +1132,13 @@ button {
 }
 
 /* responsivo */
+
+@media screen and (min-width: 1400px) {
+  .main {
+    justify-content: space-evenly;
+  }
+}
+
 @media screen and (max-width: 1335px) {
   .main {
     justify-content: flex-start;

@@ -42,21 +42,6 @@ const slaca_app = () => {
     }
   };
 
-  const updateHeightOfSidemenuByContentHeight = () => {
-    const content = document.getElementById("content");
-    const [sideBarMenu] = document.getElementsByClassName("sidemenu");
-
-    const updateSidemenuHeight = () => {
-      const currentHeight =
-        content.clientHeight || content.scrollHeight || content.offsetHeight;
-
-      sideBarMenu.style.height = `${currentHeight}px`;
-    };
-
-    content.addEventListener("click", updateSidemenuHeight);
-    window.addEventListener("load", updateSidemenuHeight);
-  };
-
   const expandTexts = () => {
     const resumeShowMoreBtn = document.getElementById("resume-text-showMore");
 
@@ -185,7 +170,6 @@ const slaca_app = () => {
   };
 
   selectItensFromSideMenu();
-  updateHeightOfSidemenuByContentHeight();
   expandTexts();
   addTopics();
   answersShowHideHandler();

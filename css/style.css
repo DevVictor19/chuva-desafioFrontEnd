@@ -31,13 +31,11 @@ button {
 }
 
 #content {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
 
   display: flex;
   flex-direction: column;
-  width: calc(100% - 220px);
+  margin-left: 220px;
 }
 
 /* side menu */
@@ -49,7 +47,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-
+  min-height: 100%;
   width: 220px;
 
   /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -1203,7 +1201,7 @@ button {
   }
 
   #content {
-    width: 100%;
+    margin-left: 0;
   }
 
   .footer-content {

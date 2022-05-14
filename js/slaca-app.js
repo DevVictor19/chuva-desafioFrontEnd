@@ -42,19 +42,19 @@ const slaca_app = () => {
     }
   };
 
-  const listenBodyContentHeight = () => {
+  const updateHeightOfSidemenuByContentHeight = () => {
     const content = document.getElementById("content");
     const [sideBarMenu] = document.getElementsByClassName("sidemenu");
 
-    const bodyHeightChangeHandler = () => {
+    const updateSidemenuHeight = () => {
       const currentHeight =
         content.clientHeight || content.scrollHeight || content.offsetHeight;
 
       sideBarMenu.style.height = `${currentHeight}px`;
     };
 
-    content.addEventListener("click", bodyHeightChangeHandler);
-    window.addEventListener("load", bodyHeightChangeHandler);
+    content.addEventListener("click", updateSidemenuHeight);
+    window.addEventListener("load", updateSidemenuHeight);
   };
 
   const expandTexts = () => {
@@ -185,7 +185,7 @@ const slaca_app = () => {
   };
 
   selectItensFromSideMenu();
-  listenBodyContentHeight();
+  updateHeightOfSidemenuByContentHeight();
   expandTexts();
   addTopics();
   answersShowHideHandler();
